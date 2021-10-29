@@ -16,7 +16,7 @@ ASSETS_PATH = OUTPUT_PATH / Path("./assets")
 
 window = Tk()
 window.title("Password Generator | Vuk1lis™")
-window.iconbitmap('./assets/logo3.ico')
+window.iconbitmap('./assets/logo.ico')
 app_width = 1200
 app_height = 720
 screen_width = window.winfo_screenwidth()
@@ -399,7 +399,7 @@ delete_button = Label(image=delete_img, relief=GROOVE, activebackground='#363739
 delete_button.bind("<1>", lambda args:[delete_all(), expandC()])
 delete_button.place(x=660, y=500)
 
-logo = PhotoImage(file=relative_to_assets("logo3.png"))
+logo = PhotoImage(file=relative_to_assets("logo.png"))
 btnState = False
 def switchMenu():
     global btnState
@@ -460,6 +460,7 @@ def about():
     pop.title("About")
     pop_width = 600
     pop_height = 200
+    pop.iconbitmap('./assets/logo.ico')
     screen_width = pop.winfo_screenwidth()
     screen_height = pop.winfo_screenheight()
     x = (screen_width / 2) - (pop_width / 2)
@@ -476,6 +477,7 @@ def help():
     pop.title("Help")
     pop_width = 700
     pop_height = 320
+    pop.iconbitmap('./assets/logo.ico')
     screen_width = pop.winfo_screenwidth()
     screen_height = pop.winfo_screenheight()
     x = (screen_width / 2) - (pop_width / 2)
