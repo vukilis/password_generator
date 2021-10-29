@@ -17,3 +17,7 @@ python password_generator.py
 **``
 Simple just open password_generator.exe in "dist" directory
 ``**
+
+## About
+
+_I made this app as a project in purpose to learn python. This is app that I built to generate random password, Also, I challenged myself and made that you can convert password to two given hash algorithm: SHA-256 and Argon2id. This project I was started with simple code, then wanted to make gui app and finished all of that with using tkinter gui framework._
