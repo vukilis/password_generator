@@ -18,7 +18,7 @@ window = Tk()
 window.title("Password Generator | Vuk1lis™")
 window.iconbitmap('./assets/logo3.ico')
 app_width = 1200
-app_height = 700
+app_height = 720
 screen_width = window.winfo_screenwidth()
 screen_height = window.winfo_screenheight()
 x = (screen_width / 2) - (app_width / 2)
@@ -437,10 +437,10 @@ def switchMenu():
             myBtn3.bind("<1>", lambda args:[about()])
         if option == options.index("LOGO"):
             nestoooo = Label(navRoot, image=logo, bg="grey17")
-            y += 200
+            y += 250
             nestoooo.place(x=25, y=y)
 def github():  
-    webbrowser.open_new(r"http://www.google.com")
+    webbrowser.open_new(r"https://github.com/vukilis/password_generator")
 def btnHoverEnterA(e):
     myBtn1["fg"] = "#EFC69B"
 def btnHoverLeaveA(e):
