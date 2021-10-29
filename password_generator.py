@@ -1,4 +1,5 @@
 from pathlib import Path
+import sys
 from tkinter import *
 from tkinter import ttk
 import tkinter as tk
@@ -10,13 +11,20 @@ import time
 import webbrowser
 from tkinter import messagebox
 import os
+from PIL import Image
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./assets")
 
+if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+    filePath = os.path.join(sys._MEIPASS, "assets\logo.ico")
+else:
+    scriptPath = os.path.realpath(os.path.dirname(sys.argv[0]))
+    filePath = os.path.join(scriptPath, "assets\logo.ico")
+
 window = Tk()
 window.title("Password Generator | Vuk1lis™")
-window.iconbitmap('./assets/logo.ico')
+window.iconbitmap(filePath)
 app_width = 1200
 app_height = 720
 screen_width = window.winfo_screenwidth()
@@ -460,7 +468,7 @@ def about():
     pop.title("About")
     pop_width = 600
     pop_height = 200
-    pop.iconbitmap('./assets/logo.ico')
+    pop.iconbitmap(filePath)
     screen_width = pop.winfo_screenwidth()
     screen_height = pop.winfo_screenheight()
     x = (screen_width / 2) - (pop_width / 2)
@@ -477,7 +485,7 @@ def help():
     pop.title("Help")
     pop_width = 700
     pop_height = 320
-    pop.iconbitmap('./assets/logo.ico')
+    pop.iconbitmap(filePath)
     screen_width = pop.winfo_screenwidth()
     screen_height = pop.winfo_screenheight()
     x = (screen_width / 2) - (pop_width / 2)
