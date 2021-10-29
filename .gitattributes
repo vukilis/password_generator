@@ -1,2 +1,1 @@
-*.html linguist-detectable=false
-*.js linguist-language=Python
+*.html linguist-detectable=Python
