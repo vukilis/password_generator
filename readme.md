@@ -15,7 +15,7 @@ python password_generator.py
 **OR**
 
 **``
-Simple just open Password Generator.exe in "dist" directory
+Simple just open "Password Generator.exe" in "dist" directory
 ``**
 
 ## About
